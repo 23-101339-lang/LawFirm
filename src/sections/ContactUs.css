@@ -1,0 +1,57 @@
+.contact-us {
+  background-color: var(--bg-secondary);
+}
+
+.contact-us__layout {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .contact-us__layout {
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
+    gap: 3rem;
+  }
+}
+
+.contact-us__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-us__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-us__details p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.contact-us__details a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact-us__details a:hover {
+  color: var(--accent-hover);
+}
+
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-us__success {
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-tertiary);
+  border-left: 4px solid var(--accent);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}

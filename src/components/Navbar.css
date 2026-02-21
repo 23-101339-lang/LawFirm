@@ -1,0 +1,150 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 10px var(--shadow);
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navbar__brand {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.navbar__nav {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  .navbar__nav {
+    display: flex;
+  }
+}
+
+.navbar__nav--open {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem;
+  gap: 0.5rem;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.navbar__link {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: color 0.2s, background 0.2s;
+  border-radius: 2px;
+}
+
+.navbar__link:hover {
+  color: var(--accent);
+}
+
+.navbar__nav--open .navbar__link {
+  text-align: left;
+  width: 100%;
+  padding: 0.75rem 1rem;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar__theme {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  transition: background 0.2s;
+}
+
+.navbar__theme:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.navbar__toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .navbar__toggle {
+    display: none;
+  }
+}
+
+.navbar__toggle span {
+  display: block;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 1px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.navbar__nav--open + .navbar__actions .navbar__toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__nav--open + .navbar__actions .navbar__toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__nav--open + .navbar__actions .navbar__toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Toggle is before actions in DOM; we need to target when nav is open */
+.navbar__nav.navbar__nav--open ~ .navbar__actions .navbar__toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__nav.navbar__nav--open ~ .navbar__actions .navbar__toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__nav.navbar__nav--open ~ .navbar__actions .navbar__toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}

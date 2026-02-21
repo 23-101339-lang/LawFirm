@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output (react-scripts uses "build/"; no dist folder)
+build/
+dist/
+
+# Env
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor
+.DS_Store
+*.log
+npm-debug.log*

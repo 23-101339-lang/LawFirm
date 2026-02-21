@@ -1,0 +1,20 @@
+.paragraph {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.paragraph--small {
+  font-size: 0.875rem;
+}
+
+.paragraph--medium {
+  font-size: 1rem;
+}
+
+.paragraph--large {
+  font-size: 1.125rem;
+}
+
+.paragraph--muted {
+  color: var(--text-muted);
+}

@@ -1,0 +1,64 @@
+.footer {
+  background-color: var(--bg-tertiary);
+  border-top: 1px solid var(--border);
+  padding: 3rem 1.5rem 2rem;
+}
+
+.footer__top {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer__top {
+    grid-template-columns: 1fr auto auto;
+    align-items: start;
+  }
+}
+
+.footer__name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__nav button {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.footer__nav button:hover {
+  color: var(--accent);
+}
+
+.footer__social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer__bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__bottom .paragraph {
+  margin: 0;
+}

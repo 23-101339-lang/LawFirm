@@ -1,0 +1,42 @@
+.practice-areas {
+  background-color: var(--bg-secondary);
+}
+
+.practice-areas__intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.practice-areas__grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .practice-areas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .practice-areas__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.practice-areas__card {
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.practice-areas__card:hover {
+  transform: translateY(-2px);
+}
+
+.practice-areas__title {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
